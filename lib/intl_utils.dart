@@ -1,3 +1,3 @@
-library intl_utils;
+library intl_utils_plus;
 
 export 'src/generator/generator.dart';

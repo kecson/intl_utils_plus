@@ -1,4 +1,4 @@
-library intl_utils;
+library intl_utils_plus;
 
 import 'dart:io';
 
