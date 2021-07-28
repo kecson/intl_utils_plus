@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import '../config/pubspec_config.dart';
 import '../constants/constants.dart';
@@ -9,6 +10,7 @@ import 'generator_exception.dart';
 import 'intl_translation_helper.dart';
 import 'label.dart';
 import 'templates.dart';
+import 'watcher.dart';
 
 /// The generator of localization files.
 class Generator {
@@ -68,6 +70,9 @@ class Generator {
 
     _otaEnabled =
         pubspecConfig.localizelyConfig?.otaEnabled ?? defaultOtaEnabled;
+
+    final watcher = Watcher.single(Directory(_arbDir), generateAsync);
+    watcher.startWatch();
   }
 
   /// Generates localization files.
