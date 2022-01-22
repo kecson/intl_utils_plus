@@ -71,7 +71,13 @@ class Generator {
     _otaEnabled =
         pubspecConfig.localizelyConfig?.otaEnabled ?? defaultOtaEnabled;
 
-    final watcher = Watcher.single(Directory(_arbDir), generateAsync);
+    final watcher = Watcher.single(Directory(_arbDir), () {
+      try {
+        generateAsync();
+      } catch (e) {
+        print(e);
+      }
+    });
     watcher.startWatch();
   }
 
