@@ -91,7 +91,6 @@ class IntlTranslationHelper {
     var data = jsonDecoder.decode(src);
     //处理Value也是一个json的数据
     data = processData(data);
-
     var locale = data['@@locale'] ?? data['_locale'];
     if (locale == null) {
       // Get the locale from the end of the file name. This assumes that the file

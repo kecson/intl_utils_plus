@@ -5,7 +5,7 @@ Dart package that creates a binding between your translations from .arb files an
 
 
 ## Note:
-- Copy from [intl_utils: ^2.4.0](https://pub.dev/packages/intl_utils) [![pub package](https://img.shields.io/pub/v/intl_utils.svg)](https://pub.dev/packages/intl_utils)
+- Copy from [intl_utils: ^2.8.1](https://pub.dev/packages/intl_utils) [![pub package](https://img.shields.io/pub/v/intl_utils.svg)](https://pub.dev/packages/intl_utils)
 
 - Add support for Group Map Json
 

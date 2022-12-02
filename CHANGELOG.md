@@ -5,10 +5,43 @@ All notable changes to the "flutter-intl" extension will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 2.4.0.1 - 2021-07-28
+## 2.8.1 - 2022-11-17
 
-- Copy from [intl_utils: ^2.4.0](https://pub.dev/packages/intl_utils) [![pub package](https://img.shields.io/pub/v/intl_utils.svg)](https://pub.dev/packages/intl_utils)
-- Add support for Group Map Json
+- Fix black frames caused by async initialization of localization messages when deferred loading is not enabled
+
+## 2.8.0 - 2022-11-15
+
+- Update `analyzer` and `lints` dependencies
+
+## 2.7.0 - 2022-07-07
+
+- Update `analyzer` and `petitparser` dependencies
+
+## 2.6.1 - 2022-01-14
+
+- Improve error handling for invalid config files
+
+- Update `analyzer` dependency
+
+## 2.6.0 - 2021-12-24
+
+- Add custom date-time format option
+
+## 2.5.1 - 2021-11-08
+
+- Fix optional parameters string issue
+
+## 2.5.0 - 2021-11-05
+
+- Add support for json strings
+
+- Add number and date-time format options
+
+- Move from pedantic to lints package
+
+## 2.4.1 - 2021-10-01
+
+- Update `analyzer` dependency
 
 ## 2.4.0 - 2021-07-13
 

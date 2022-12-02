@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import '../config/pubspec_config.dart';
 import '../constants/constants.dart';
@@ -10,7 +9,6 @@ import 'generator_exception.dart';
 import 'intl_translation_helper.dart';
 import 'label.dart';
 import 'templates.dart';
-import 'watcher.dart';
 
 /// The generator of localization files.
 class Generator {
@@ -70,15 +68,6 @@ class Generator {
 
     _otaEnabled =
         pubspecConfig.localizelyConfig?.otaEnabled ?? defaultOtaEnabled;
-
-    final watcher = Watcher.single(Directory(_arbDir), () {
-      try {
-        generateAsync();
-      } catch (e) {
-        print(e);
-      }
-    });
-    watcher.startWatch();
   }
 
   /// Generates localization files.
@@ -132,7 +121,11 @@ class Generator {
       var type = meta['type'];
       var description = meta['description'];
       var placeholders = meta['placeholders'] != null
-          ? (meta['placeholders'] as Map<String, dynamic>).keys.toList()
+          ? (meta['placeholders'] as Map<String, dynamic>)
+              .keys
+              .map((placeholder) => Placeholder(
+                  key, placeholder, meta['placeholders'][placeholder]))
+              .toList()
           : null;
 
       return Label(name, content,

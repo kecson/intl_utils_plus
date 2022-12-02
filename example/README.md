@@ -1,3 +1,1 @@
-Please see [Usage](https://pub.dev/packages/intl_utils).
-
-Support Group Map
+Please see [Usage](https://pub.dev/packages/intl_utils#usage).
